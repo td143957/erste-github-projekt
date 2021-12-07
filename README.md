@@ -251,3 +251,39 @@ Ich habe nämlich viel Frauen für dich am Sonntag
 
     </body>
 </html>
+
+
+
+07.12.2021
+
+<?php
+echo"7.4.1: Zeichen ausschneiden  mit >>substr(String,Startposition,Länge)<< "."</p>";
+echo "Position in einem String: -> 01234......-4-3-2-1 <-"."</p>";
+echo "String : der zugeschnittene String"."</p>";
+echo "Startposition: wo das abschneiden anfängt"."</p>";
+echo "Länge: optimal"."</p>";
+echo "Beispiele: "."</p>";
+
+$a = "PHP ist Toll";
+
+    echo substr($a,4)."</p>";
+  echo substr($a,4,3)."</p>";
+  echo substr($a,-4)."</p>";
+  echo substr($a,1,-1)."</p>";
+  echo substr($a,8,-3)."<hr/>";
+  ;
+echo "7.4.2 Whitespaces entfernen"."</p>";
+echo "BSP 1: mit trim(String), Whitespace am Anfang und
+ am Ende der String entfernen"."</p>";
+$a = "  Leerzeichen  "."</p>";
+echo "Viele ".trim($a);
+echo "BSP 2: mit ltrim(String), Whitespace nur am Anfang der String entfernen"."</p>";
+$a = "  Leerzeichen  ";
+echo "Viele ".trim($a)."</p>";
+echo "BSP 3: mit rtrim(String) oder chop(String),
+Whitespace nur am Ende der  String entfernen"."</p>";
+$a = "  Leerzeichen  ";
+echo "Viele ".trim($a)."<hr/>";
+echo "7.5 : Suchen und Ersetzen "."</p>";
+
+?>
