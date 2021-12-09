@@ -287,3 +287,70 @@ echo "Viele ".trim($a)."<hr/>";
 echo "7.5 : Suchen und Ersetzen "."</p>";
 
 ?>
+
+
+<?php
+echo "7.5 : Suchen und Ersetzen "."</p>";
+
+echo "Die Funktion strpos(String,Suchstring,Beginn)
+ist für die Suche einer Position zuständig "."</p>";
+echo"BSP 1 : (abhängig von Groß und Kleinbuchstaben)"."</p>";
+$a = "Die blauen Reiter.";
+echo"Ausbage: " .strpos($a,"blau").": weil die Buchstabe >>b<< an der 4te Position liegt"."</p>";
+
+echo"BSP 2 : (Mit undefinierter Suchstring ,statt blau,rlau )"."</p>";
+$a = "Die blauen Reiter.";
+echo "Ausbage: ".strpos($a,"rlau")." :keine Ausgabe ,weil für rlau kein Suchstring vorliegt"."</p>";
+
+echo"BSP 3 : (Mit negativen Offset)"."</p>";
+$a = "Die blauen Reiter.";
+echo "Ausbage: ".strpos($a,"blau",-14).": entspricht -14 ,wenn von Ende der String aus gezählt wird.   "."</p>";
+
+echo"BSP 4 : (unabhängig von  Groß und Kleinbuchstaben)"."</p>";
+$a = "Die blauen Reiter.";
+echo "Ausbage: ".stripos($a,"Blau").": funktioniert genau so für >>blau<<"."</p>";
+
+echo"BSP 5 : Funktion strrpos(String,Suchstring) ist das Gegenstück von strpos(),
+Hier lauft die Suche von Links nach Rechts"."</p>";
+$a = "Die blauen Reiter.";
+echo"Ausbage: " .strrpos($a,"R").": abhängig von Groß und Kleinbuchstaben"."<hr/>";
+
+echo" 7.12 Reststring :
+liefert den Rest des Srings,wenn Suchstring auftaucht.
+Der Suchstring ist in Reststring enthalten"."</p>";
+$a = "Die blauen Reiter.";
+echo "Ausbage: ".strstr($a,"laue")."</p>";
+
+echo"strchr(String,Suchstring) ist das Alias(Also funktioniert genau so wie ) zu strstr()"."</p>";
+$a = "Die blauen Reiter.";
+echo "Ausbage: ".strchr($a,"laue")."<hr/>";
+
+echo "7.19 Haufigkeit des Vorkommens : "."</p>";
+echo "Die Funktion substr_count(String,Suchstring,Länge)  zählt, "."</p>";
+echo "wie oft einen Suchstring(eine Buchstabe) in einen String vorkommt"."</p>";
+$a = "Eine blauen Reiter.";
+echo "Ausbage: ".substr_count($a,"e")." Mal , Aber abhängig von Groß und Kleinbuchstaben"."<hr/>";
+
+echo "7.21 : Mehrere Zeichen suchen"."</p>";
+echo "Die Funktion strpbrk(String,Zeichen) erlaubt die Suche nach mehrere Zeichen"."</p>";
+echo "Sobalt eines der Zeichen gefunden wurde ,wird der gesamte String ausgegeben"."</p>";
+$a = "Die blauen Reiter.";
+echo "Ausgabe : ".strpbrk($a, "uxayi.")."  Dabei geht der Suchstring von Link nach Recht"."<hr/>";
+
+echo "7.22 String in String suchen,hier die schnellste Lösung ist mit str_contains() möglisch . "."</p>";
+$a = "Die blauen Reiter." ;
+echo"Ausgabe :  ";
+var_dump( str_contains($a, "blau"));
+echo" .Man bekommt hier >> true <<,weil blau == blau,abhängig von Gross und kleinBuchstaben"."</p>";
+var_dump( str_contains($a, "Blau"));
+echo" .Man bekommt hier >> false <<,weil blau != Blau,abhängig von Gross und kleinBuchstaben"."</p>";
+
+echo "Alternativ : kann man str_starts_with() und str_ends_with() anwenden ."."</p>";
+echo "Dabei wird der Anfang und das Ende des Strings mit dem Suchstring vergliechen ."."</p>";
+$a = "Die blauen Reiter.";
+echo "Ausgabe : ";
+var_dump(str_starts_with($a,"Die"));
+var_dump(str_ends_with($a,"."));
+
+?>
+
