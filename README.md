@@ -354,3 +354,32 @@ var_dump(str_ends_with($a,"."));
 
 ?>
 
+
+
+<?php 
+
+echo" 7.5.2 Einsetzen :  "."</p>";
+echo"Mit der funktion substr_replace(String,Ersatz,Startposition,länge) Funktioniert wie substr()"."</p>";
+echo"Dabei sind negative Werte sowohl für den startposition  als auch für die Länge möglich"."</p>";
+echo"angegebene Bereich werden nicht ausgeschnitten sondern ersetzt "."</p>";
+$a = "Die roten Reiter.";
+echo"Ausgabe : ".substr_replace($a,"blauen",4,5)."<hr/>";
+
+echo"7.25 Zum Suchen und Ersetzen : "."</p>";
+echo"braucht man substr_replace(Suchstring,Ersatz,String)"."</p>";
+$a = "jippieeejey";
+echo "Ausgabe : ".str_replace("e","i",$a)." .Hier werden alle >>e<< in >>i<< ausgetauscht"."<hr/>";
+
+echo"Mehrere Zeichen ersetzen : "."</p>";
+echo"Die Funktion strtr(String,Suchstring,Ersatz) funktioniert wie die strpbrk() : "."</p>";
+echo"BSP 1 : "."</p>";
+$a = (" er arbeitet und Hotel ");
+echo "Ausgabe 1: ". strtr($a,"und","ins")."</p>";
+
+echo "Die Funktion strtr(String,Array) funktioniert genau sowie strtr(String,Suchstring,Ersatz) aus BSP 1 "."</p>";
+echo"BSP 2 : "."</p>";
+$a = (" er arbeitet und Hotel ");
+echo "Ausgabe 2: ". strtr($a,array("und"=>"ins"))."<hr/>";
+
+echo"7.6 : Sonderzeichen, HTML : "."</p>";
+?>
