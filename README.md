@@ -370,6 +370,15 @@ echo"braucht man substr_replace(Suchstring,Ersatz,String)"."</p>";
 $a = "jippieeejey";
 echo "Ausgabe : ".str_replace("e","i",$a)." .Hier werden alle >>e<< in >>i<< ausgetauscht"."<hr/>";
 
+echo" 7.26 : statt substr_replace(),kann man auch Array() benutzen"."</p>";
+$a = "jippieeejey";
+$b = "Holadrioe";
+$ergebnis = str_replace(array("e","o"),array("i","ö"),array($a,$b));
+echo "Ergebnis : ";
+print_r($ergebnis);
+echo "  .Hier werden >>e<< in >>i<< und >>o<< in >>ö<< ausgetaucht ";
+
+
 echo"Mehrere Zeichen ersetzen : "."</p>";
 echo"Die Funktion strtr(String,Suchstring,Ersatz) funktioniert wie die strpbrk() : "."</p>";
 echo"BSP 1 : "."</p>";
